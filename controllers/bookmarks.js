@@ -4,6 +4,8 @@ const router = express.Router();
 // import the bookmark queries
 const db = require("../db/queries");
 
+//reminder not using async wait - using .then instead to catch promises. 
+
 // get all bookmarks
 router.get("/", (req, res) => {
   db.getAllBookmarks().then(results => {
